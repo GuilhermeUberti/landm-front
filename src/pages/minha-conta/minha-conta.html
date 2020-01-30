@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="topo"></div>
+  <div class="titulo">Minha Conta</div>
+  <div class="imagem" [ngStyle]="{'background-image': 'url(' + usuarioLogado.foto + ')'}" (click)="mudarFoto()">
+
+  </div>
+  <div class="formulario">
+
+    <input type="text" placeholder="Nome" [(ngModel)]="usuarioLogado.nome">
+    <input type="text" placeholder="Email" [(ngModel)]="usuarioLogado.email">
+    <input type="tel" placeholder="Telefone" [(ngModel)]="usuarioLogado.telefone">
+    <ion-item>
+      <textarea class="textareaMinhaConta" cols="45" rows="6" type="text"
+        placeholder="Ex:. Rua dos jasmins, Nº 209, bairro Córrego Grande, CEP: 88037-145"
+        [(ngModel)]="usuarioLogado.enderecoCompleto"></textarea>
+    </ion-item>
+
+    <div class="botao">
+      <button ion-button outline color="dark" round block (click)="salvar()">
+        Salvar os dados
+      </button>
+    </div>
+  </div>
+</ion-content>
+<tab [pagina]="'Minha Conta'"></tab>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Meus Pedidos</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <div (click)="visualizarPedido()" tappable>
+    <ion-card *ngFor="let item of lista">
+      <ion-card-header icon-left>
+        <ion-icon name="cart"></ion-icon>      
+        Pedido realizado em {{ item.dataPedido | date:'dd/MM/yyyy' }}
+      </ion-card-header>
+      <ion-card-content>
+        <p>Você comprou {{ contaItem(item) }} produtos neste dia.</p>
+        <p>Valor total da compra: <strong>{{ item.valorTotal | real }}</strong></p>
+        <p>Nome Cliente: <strong>{{usuarioLogado.nome}}</strong></p>
+        <p>Endereço Cliente: {{usuarioLogado.enderecoCompleto}}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+
+  <ion-infinite-scroll (ionInfinite)='doInfinite($event)'>
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+<tab [pagina]="'MeusPedidos'"></tab>

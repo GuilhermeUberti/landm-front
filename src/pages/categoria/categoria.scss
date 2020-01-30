@@ -1,0 +1,49 @@
+page-categoria {
+  .blur {
+    background: linear-gradient(to bottom, rgb(54, 53, 53) 0%, rgb(54, 53, 53) 100%);
+    height: auto;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+  }
+  .admin {
+    text-align: right;
+  }
+  .navHeader {
+    color: black;
+  }
+  .categoria {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+  }
+  .categoria p {
+    text-shadow: 2px 2px 2px #000;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .pImagem {
+      color: white;
+  }
+  .categoria .imagem {
+    width: 100%;
+    height: 120px;
+    border: 1px solid white;
+    background-size: cover;
+    opacity: 0.4;
+    margin-top: 3px;
+  }
+  .topoCategoria {
+    position: fixed;
+    width: 100%;
+    background: red;
+    height: 100px;
+    background: linear-gradient(to bottom, rgb(54, 53, 53) 0%, rgb(240, 235, 235) 100%);
+  }
+}
